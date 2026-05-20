@@ -12,23 +12,23 @@ import InActionSection from '../components/home/InActionSection';
 export default function Home() {
   return (
     <Layout
-      title={`The Free Software Media System`}
+      title='Your Personal Media Server'
       description='The volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached.'
     >
-      <Hero title='The Free Software Media System' large>
+      <Hero title='Your Personal Media Server' large>
         <p className='hero__text margin-vert--lg'>
-          Jellyfin is the volunteer-built media solution that puts <em>you</em> in control of your media. Stream to any
-          device from your own server, with no strings attached. Your media, your server, your way.
+          Jellyfin organizes your movies, shows, music, photos, and live TV into a polished library you can stream from
+          your own server, on your own terms.
         </p>
         <div className='hero__buttons'>
-          <a href='https://demo.jellyfin.org/stable' className='button button--lg button--secondary button--outline'>
-            See it in Action
-          </a>
           <Link to='/downloads/server' className='button button--lg button--primary'>
             Download Now
           </Link>
+          <a href='https://demo.jellyfin.org/stable' className='button button--lg button--secondary button--outline'>
+            See it in Action
+          </a>
         </div>
-        <p>
+        <p className='hero__note'>
           <a href='/docs/general/community-standards/servers'>Note: We do not run servers for users.</a>
         </p>
       </Hero>

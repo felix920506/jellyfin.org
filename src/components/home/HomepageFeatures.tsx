@@ -55,7 +55,7 @@ const FeatureList: Feature[] = [
 
 function FeatureCard({ Svg, title, description }: Feature) {
   return (
-    <>
+    <article className={styles.featureCard}>
       <div className='text--center'>
         <Svg className={styles.featureSvg} title={title} />
       </div>
@@ -63,7 +63,7 @@ function FeatureCard({ Svg, title, description }: Feature) {
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-    </>
+    </article>
   );
 }
 
@@ -82,7 +82,7 @@ export default function HomepageFeatures() {
         </div>
         <div className='row row--center padding-horiz--sm'>
           {FeatureList.map((feature) => (
-            <div key={`column-${feature.title}`} className='col col--3 hidden--mobile'>
+            <div key={`column-${feature.title}`} className={clsx('col col--3 hidden--mobile', styles.featureColumn)}>
               <SwiperSlide>
                 <FeatureCard {...feature} />
               </SwiperSlide>

@@ -1,11 +1,35 @@
 .client-icon {
   display: block;
-  max-width: 7rem;
-  color: white;
+  max-width: 8.25rem;
+  min-height: 8.25rem;
+  padding: 1rem 0.75rem;
+  border: 1px solid var(--jf-border);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.045);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.client-icon:hover {
+  border-color: var(--jf-plex-yellow);
+  background: var(--jf-plex-yellow-soft);
+  color: var(--jf-plex-yellow);
+  transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .client-icon > svg {
   display: block;
   margin: 0 auto;
-  color: white;
+  color: currentColor;
+  fill: currentColor;
+}
+
+.client-icon svg path {
+  fill: currentColor;
 }

@@ -1,0 +1,22 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.showcaseFigure {
+  overflow: hidden;
+  border: 1px solid var(--jf-border);
+  border-radius: 8px;
+  background-color: var(--jf-surface-elevated);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 0.32);
+}
+
+.showcaseImage {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid var(--jf-border);
+}
+
+.showcaseCaption {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  color: var(--jf-muted);
+  background-color: var(--jf-surface-elevated);
+}

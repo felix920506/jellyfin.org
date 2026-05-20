@@ -18,57 +18,102 @@ code {
   /* base font */
   --ifm-font-family-base: 'Noto Sans', sans-serif;
   --ifm-line-height-base: 1.7;
-  --ifm-font-color-base: #ffffff;
+  --ifm-font-color-base: #f7f7f7;
+  --ifm-font-color-secondary: #c7c8ce;
   /* headings */
   --ifm-h1-font-size: 2.074em;
   --ifm-h2-font-size: 1.728em;
   /* custom colors */
-  --ifm-color-primary: #007ca6;
-  --ifm-color-primary-dark: #00749b;
-  --ifm-color-primary-darker: #006b90;
-  --ifm-color-primary-darkest: #006385;
-  --ifm-color-primary-light: #008dbd;
-  --ifm-color-primary-lighter: #009ed4;
-  --ifm-color-primary-lightest: #00afeb;
-  --ifm-background-color: #000b25 !important;
+  --ifm-color-primary: #e5a00d;
+  --ifm-color-primary-dark: #cf900c;
+  --ifm-color-primary-darker: #b9810a;
+  --ifm-color-primary-darkest: #8f6408;
+  --ifm-color-primary-light: #f0ad1d;
+  --ifm-color-primary-lighter: #f4bd45;
+  --ifm-color-primary-lightest: #f8cf73;
+  --ifm-background-color: #0b0d12 !important;
+  --ifm-background-surface-color: #15171d;
   /* buttons */
-  --ifm-button-color: #ffffff;
+  --ifm-button-color: #f7f7f7;
   --ifm-button-border-radius: 30px;
   /* cards */
-  --ifm-card-background-color: #172138;
+  --ifm-card-background-color: #181b22;
   /* code blocks */
   --ifm-code-font-size: 95%;
-  --ifm-code-background: #292d3e; /* match code blocks */
+  --ifm-code-background: #20232b; /* match code blocks */
   /* footer */
-  --ifm-footer-background-color: #333c44;
-  --ifm-footer-link-color: #ffffff;
+  --ifm-footer-background-color: #101217;
+  --ifm-footer-link-color: #f7f7f7;
   /* navbar */
-  --ifm-navbar-background-color: #000b25;
-  --ifm-navbar-search-input-background-color: #172138;
+  --ifm-navbar-background-color: rgb(11 13 18 / 0.94);
+  --ifm-navbar-search-input-background-color: #1b1e25;
   --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
   /* tabs */
   --ifm-tabs-padding-vertical: 0.5rem;
 
   /* custom Jellyfin colors */
-  --jf-gradient-color-primary-dark: #003c50;
-  --jf-gradient-color-secondary-dark: #3e2247;
+  --jf-plex-yellow: #e5a00d;
+  --jf-plex-yellow-bright: #f3ba35;
+  --jf-plex-yellow-soft: rgb(229 160 13 / 0.16);
+  --jf-background: #0b0d12;
+  --jf-surface: #15171d;
+  --jf-surface-elevated: #1c2028;
+  --jf-border: #30343d;
+  --jf-border-strong: #4a4f59;
+  --jf-muted: #c7c8ce;
+  --jf-gradient-color-primary-dark: #0b0d12;
+  --jf-gradient-color-secondary-dark: #29200f;
 }
 
 h1 {
-  font-weight: 300;
+  font-weight: 750;
   line-height: 1.35;
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 750;
   line-height: 1.35;
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.02), rgb(255 255 255 / 0) 360px),
+    var(--jf-background);
+}
+
+a {
+  text-underline-offset: 0.22em;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--jf-border);
+  box-shadow: 0 10px 35px rgb(0 0 0 / 0.2);
+  backdrop-filter: blur(16px);
+}
+
+.navbar__link {
+  color: var(--ifm-font-color-base);
+  font-weight: 700;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--jf-plex-yellow);
+}
+
+.navbar__logo img {
+  height: 2.1rem;
+}
+
+.footer {
+  border-top: 1px solid var(--jf-border);
 }
 
 mark {
   padding-left: 2px;
   padding-right: 2px;
-  background-color: var(--ifm-color-primary);
-  color: var(--ifm-font-color-base);
+  background-color: var(--jf-plex-yellow);
+  color: #111318;
 }
 
 /* The default text color for this badge is very low contrast */
@@ -91,6 +136,15 @@ a.pills__item:not(.pills__item--active) {
   color: var(--ifm-font-color-base);
 }
 
+.pills__item {
+  border-radius: 999px;
+}
+
+.pills__item--active {
+  color: #111318;
+  font-weight: 800;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
@@ -105,9 +159,75 @@ a.pills__item:not(.pills__item--active) {
   gap: 0.25rem;
 }
 
+.button {
+  font-weight: 800;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button--primary {
+  background-color: var(--jf-plex-yellow);
+  border-color: var(--jf-plex-yellow);
+  color: #111318 !important;
+  box-shadow: 0 14px 34px rgb(229 160 13 / 0.24);
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: var(--jf-plex-yellow-bright);
+  border-color: var(--jf-plex-yellow-bright);
+  color: #111318 !important;
+}
+
+.button--primary:active {
+  background-color: #c98e0d;
+  border-color: #c98e0d;
+}
+
+.button--secondary {
+  background-color: rgb(255 255 255 / 0.08);
+  border-color: var(--jf-border-strong);
+  color: var(--ifm-font-color-base) !important;
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: rgb(255 255 255 / 0.14);
+  border-color: var(--jf-plex-yellow);
+  color: var(--jf-plex-yellow) !important;
+}
+
+.button--outline.button--secondary {
+  background-color: rgb(11 13 18 / 0.4);
+  border-color: rgb(255 255 255 / 0.4);
+  color: var(--ifm-font-color-base) !important;
+}
+
+.button--outline.button--secondary:hover,
+.button--outline.button--secondary:focus {
+  border-color: var(--jf-plex-yellow);
+  color: var(--jf-plex-yellow) !important;
+}
+
+.card {
+  border: 1px solid var(--jf-border);
+  border-radius: 8px;
+  box-shadow: 0 18px 46px rgb(0 0 0 / 0.18);
+}
+
 .card--outline {
   background-color: transparent;
-  border: 2px solid #172138;
+  border: 2px solid var(--jf-border);
   box-shadow: none;
 }
 
@@ -115,7 +235,8 @@ a.pills__item:not(.pills__item--active) {
   justify-content: center;
 }
 
-.fill--white {
+.fill--white,
+.fill-white {
   fill: var(--ifm-font-color-base);
 }
 
@@ -138,8 +259,8 @@ a.pills__item:not(.pills__item--active) {
 }
 
 .tabs-container {
-  border: 1px solid #fff4;
-  background-color: #fff1;
+  border: 1px solid var(--jf-border);
+  background-color: rgb(255 255 255 / 0.05);
   border-radius: 8px;
   padding: 16px;
 }

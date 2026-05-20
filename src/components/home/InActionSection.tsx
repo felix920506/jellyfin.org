@@ -11,6 +11,7 @@ import PlaybackImageUrl from '../../../static/images/screenshots/home/10.8-playb
 import 'swiper/css';
 import 'swiper/css/pagination';
 import landingSectionStyles from './LandingSection.module.scss';
+import styles from './InActionSection.module.scss';
 
 const screenshots = [
   {
@@ -61,9 +62,9 @@ export default function InActionSection() {
             >
               {screenshots.map(({ id, caption, url, alt }) => (
                 <SwiperSlide key={`slide-${id}`}>
-                  <figure className='margin--none'>
-                    <img src={url} alt={alt} />
-                    <figcaption className='text--center'>{caption}</figcaption>
+                  <figure className={clsx('margin--none', styles.showcaseFigure)}>
+                    <img src={url} alt={alt} className={styles.showcaseImage} />
+                    <figcaption className={clsx('text--center', styles.showcaseCaption)}>{caption}</figcaption>
                   </figure>
                 </SwiperSlide>
               ))}

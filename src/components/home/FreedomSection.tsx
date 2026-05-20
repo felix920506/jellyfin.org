@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 import landingSectionStyles from './LandingSection.module.scss';
+import styles from './FreedomSection.module.scss';
 
 const ICON_SIZE = 48;
 
@@ -54,9 +55,11 @@ export default function FreedomSection() {
         >
           {cards.map(({ id, title, icon, description }) => (
             <div key={id} className='col col--6 margin-top--lg'>
-              {icon}
-              <h3>{title}</h3>
-              <p className='margin--none'>{description}</p>
+              <article className={styles.freedomCard}>
+                {icon}
+                <h3>{title}</h3>
+                <p className='margin--none'>{description}</p>
+              </article>
             </div>
           ))}
         </div>

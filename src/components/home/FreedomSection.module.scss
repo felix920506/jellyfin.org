@@ -1,0 +1,26 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.freedomCard {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--jf-border);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.07), rgb(255 255 255 / 0.025)),
+    var(--jf-surface-elevated);
+  box-shadow: 0 18px 46px rgb(0 0 0 / 0.18);
+}
+
+.freedomCard svg {
+  color: var(--jf-plex-yellow);
+  fill: currentColor;
+}
+
+.freedomCard h3 {
+  color: #fff;
+  font-weight: 800;
+}
+
+.freedomCard p {
+  color: var(--jf-muted);
+}

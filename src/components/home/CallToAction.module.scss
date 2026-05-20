@@ -1,13 +1,33 @@
 /* stylelint-disable docusaurus/copyright-header */
 
 .cta {
-  background: linear-gradient(to left, var(--jf-gradient-color-secondary-dark), var(--jf-gradient-color-primary-dark));
+  position: relative;
+  background:
+    linear-gradient(90deg, rgb(229 160 13 / 0.12), rgb(229 160 13 / 0) 38%),
+    var(--jf-background);
   color: #fff;
   padding: 4rem 0;
   text-align: center;
+  border-top: 1px solid var(--jf-border);
+}
+
+.cta::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(720px, 80%);
+  height: 1px;
+  content: '';
+  background: linear-gradient(90deg, transparent, var(--jf-plex-yellow), transparent);
+  transform: translateX(-50%);
+}
+
+.cta h2 {
+  color: #fff;
+  font-weight: 850;
 }
 
 .cta-sub {
-  opacity: 0.85;
+  color: var(--jf-muted);
   margin: 0;
 }
