@@ -26,6 +26,13 @@ const comparisonRows: ComparisonRow[] = [
     winner: 'No surprise activity emails'
   },
   {
+    feature: 'Streaming-store clutter',
+    jellyfin: 'The home screen is about your media, your users, and the clients you choose to connect.',
+    plex:
+      'Plex mixes personal libraries with ad-supported movies, free Live TV, Discover recommendations, and rent-or-buy links.',
+    winner: 'Your library stays the product'
+  },
+  {
     feature: 'Cost to run your server',
     jellyfin: 'Free server, free official clients, no hidden fees.',
     plex: 'Free tier, with several personal-media features reserved for paid plans.',
@@ -91,8 +98,8 @@ export default function ProductComparison() {
             <h2>Know what you are trading away.</h2>
             <p>
               You do not have to rage-quit your current setup to ask better questions. If your media server now feels
-              like a subscription funnel, compare it with Jellyfin before your next renewal or Lifetime Plex Pass
-              deadline, without reworking every folder before you know whether switching is worth it.
+              like a subscription funnel and streaming storefront, compare it with Jellyfin before your next renewal or
+              Lifetime Plex Pass deadline, without reworking every folder before you know whether switching is worth it.
             </p>
           </div>
         </div>

@@ -23,9 +23,9 @@ export default function Home() {
         <p className='hero__text margin-vert--lg'>
           If Plex&apos;s pricing, account requirements, or watch-history surprises have you second-guessing the platform,
           Jellyfin gives you a low-risk way to compare. Run it beside Plex, point it at your media, and see what it feels
-          like when hardware transcoding, live TV, remote access, and your watch history stay under your control. The
-          next major version adds support for common Plex-style media-library folder layouts, so switching does not have
-          to start with a mass rename project.
+          like when hardware transcoding, live TV, remote access, and your watch history stay under your control instead
+          of sharing space with someone else&apos;s streaming promos. The next major version adds support for common
+          Plex-style media-library folder layouts, so switching does not have to start with a mass rename project.
         </p>
         <div className='hero__buttons'>
           <Link to='/downloads/server' className='button button--lg button--primary'>
