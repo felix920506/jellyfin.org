@@ -13,6 +13,12 @@ type ComparisonRow = {
 
 const comparisonRows: ComparisonRow[] = [
   {
+    feature: 'Watch history privacy',
+    jellyfin: 'Viewing history stays on your server instead of becoming a social feed.',
+    plex: 'Discover Together drew backlash after activity emails surfaced watch activity to Plex friends and family.',
+    winner: 'No surprise activity emails'
+  },
+  {
     feature: 'Cost to run your server',
     jellyfin: 'Free server, free official clients, no hidden fees.',
     plex: 'Free tier, with several personal-media features reserved for paid plans.',
@@ -52,16 +58,16 @@ const comparisonRows: ComparisonRow[] = [
 
 const statCards = [
   {
+    value: 'Local',
+    label: 'Watch history by default'
+  },
+  {
+    value: 'No',
+    label: 'Required Jellyfin cloud account'
+  },
+  {
     value: '$0',
     label: 'Jellyfin subscription required'
-  },
-  {
-    value: 'GPL',
-    label: 'Free software license'
-  },
-  {
-    value: 'Yours',
-    label: 'Server, data, and choices'
   }
 ];
 
@@ -72,12 +78,29 @@ export default function ProductComparison() {
         <div className={clsx('row row--center text--center', styles.comparisonHeader)}>
           <div className='col col--8'>
             <p className={styles.eyebrow}>Jellyfin vs Plex</p>
-            <h2>Same media library idea. Very different deal.</h2>
+            <h2>Own the server. Own the watch history.</h2>
             <p>
-              Plex is polished, but its best personal-media features increasingly sit behind accounts and paid plans.
-              Jellyfin keeps the media server model simple: install it, own it, and keep the useful parts included.
+              Plex is polished, but its best personal-media features increasingly sit behind accounts, paid plans, and
+              social discovery layers. Jellyfin keeps the media server model simple: your media, your users, your watch
+              history, and your choices stay under your control.
             </p>
           </div>
+        </div>
+
+        <div className={styles.privacyCallout}>
+          <strong>Privacy is the product boundary.</strong>
+          <p>
+            Plex&apos;s 2023 Discover Together rollout triggered a backlash after weekly activity emails surprised users
+            by surfacing viewing activity to Plex friends and family. A self-hosted media server should not become a
+            social network unless you ask for one.
+          </p>
+          <a
+            href='https://www.techhive.com/article/2157803/plex-discover-together-privacy-concerns.html'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Read about the Plex privacy backlash
+          </a>
         </div>
 
         <div className={styles.stats}>
