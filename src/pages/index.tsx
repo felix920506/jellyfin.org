@@ -8,6 +8,7 @@ import CallToAction from '../components/home/CallToAction';
 import FreedomSection from '../components/home/FreedomSection';
 import Hero from '../components/common/Hero';
 import InActionSection from '../components/home/InActionSection';
+import ProductComparison from '../components/home/ProductComparison';
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       </Hero>
       <main>
         <HomepageFeatures />
+        <ProductComparison />
         <ClientSection />
         <InActionSection />
         <FreedomSection />

@@ -1,0 +1,142 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.comparison {
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(920px, 88%);
+  height: 1px;
+  content: '';
+  background: linear-gradient(90deg, transparent, var(--jf-plex-yellow), transparent);
+  transform: translateX(-50%);
+}
+
+.comparisonHeader {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.35rem;
+  color: var(--jf-plex-yellow) !important;
+  font-size: 0.9rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.statCard {
+  padding: 1.25rem;
+  border: 1px solid var(--jf-border);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.025)),
+    var(--jf-surface-elevated);
+  text-align: center;
+  box-shadow: 0 18px 45px rgb(0 0 0 / 0.16);
+}
+
+.statCard strong {
+  display: block;
+  color: var(--jf-plex-yellow);
+  font-size: 2.1rem;
+  line-height: 1;
+}
+
+.statCard span {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--jf-muted);
+  font-size: 0.95rem;
+}
+
+.tableShell {
+  overflow-x: auto;
+  border: 1px solid var(--jf-border);
+  border-radius: 8px;
+  background-color: #101217;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 0.28);
+}
+
+.comparisonTable {
+  width: 100%;
+  min-width: 860px;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.comparisonTable caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.comparisonTable th,
+.comparisonTable td {
+  width: 25%;
+  padding: 1rem;
+  border-bottom: 1px solid var(--jf-border);
+  vertical-align: top;
+}
+
+.comparisonTable thead th {
+  color: #fff;
+  background-color: rgb(255 255 255 / 0.055);
+  font-size: 0.92rem;
+  font-weight: 850;
+  text-align: left;
+}
+
+.comparisonTable tbody th {
+  color: #fff;
+  font-weight: 800;
+  text-align: left;
+}
+
+.comparisonTable td {
+  color: var(--jf-muted);
+}
+
+.comparisonTable tbody tr:last-child th,
+.comparisonTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.jellyfinCell {
+  color: #f7f7f7 !important;
+  background-color: var(--jf-plex-yellow-soft);
+}
+
+.winnerBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgb(229 160 13 / 0.5);
+  border-radius: 999px;
+  background-color: rgb(229 160 13 / 0.14);
+  color: var(--jf-plex-yellow);
+  font-size: 0.86rem;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+@media (max-width: 996px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
