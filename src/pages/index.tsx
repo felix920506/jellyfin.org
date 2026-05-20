@@ -13,24 +13,27 @@ import ProductComparison from '../components/home/ProductComparison';
 export default function Home() {
   return (
     <Layout
-      title='Your Personal Media Server'
-      description='The volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached.'
+      title='Switch from Plex to Jellyfin'
+      description='Plex Pass prices are climbing. Take your media library back with Jellyfin, the free software media server that keeps your files, watch history, and server under your control.'
     >
-      <Hero title='Your Personal Media Server' large>
+      <Hero title='Leaving Plex? Take Your Library Back.' large>
+        <p className='hero__eyebrow'>Plex refugees welcome. Your media should never become leverage.</p>
         <p className='hero__text margin-vert--lg'>
-          Jellyfin organizes your movies, shows, music, photos, and live TV into a polished library you can stream from
-          your own server, on your own terms.
+          With Lifetime Plex Pass set to jump to $749.99 on July 1, it is fair to ask why access to your own media keeps
+          coming with more toll booths. Jellyfin is the free, self-hosted way to keep your library, watch history,
+          hardware transcoding, live TV, and remote access setup under your control.
         </p>
         <div className='hero__buttons'>
           <Link to='/downloads/server' className='button button--lg button--primary'>
-            Download Now
+            Switch to Jellyfin
           </Link>
-          <a href='https://demo.jellyfin.org/stable' className='button button--lg button--secondary button--outline'>
-            See it in Action
+          <a href='#jellyfin-vs-plex' className='button button--lg button--secondary button--outline'>
+            Compare with Plex
           </a>
         </div>
         <p className='hero__note'>
-          <a href='/docs/general/community-standards/servers'>Note: We do not run servers for users.</a>
+          No subscription tiers. No central media account requirement. No hostage vibes.{' '}
+          <a href='/docs/general/community-standards/servers'>We do not run servers for users.</a>
         </p>
       </Hero>
       <main>

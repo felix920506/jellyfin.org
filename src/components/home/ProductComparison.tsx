@@ -73,7 +73,10 @@ const statCards = [
 
 export default function ProductComparison() {
   return (
-    <section className={clsx(styles.comparison, landingSectionStyles['landing-section'], 'padding-vert--xl')}>
+    <section
+      id='jellyfin-vs-plex'
+      className={clsx(styles.comparison, landingSectionStyles['landing-section'], 'padding-vert--xl')}
+    >
       <div className='container'>
         <div className={clsx('row row--center text--center', styles.comparisonHeader)}>
           <div className='col col--8'>
