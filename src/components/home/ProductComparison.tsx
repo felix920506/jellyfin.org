@@ -13,6 +13,13 @@ type ComparisonRow = {
 
 const comparisonRows: ComparisonRow[] = [
   {
+    feature: 'Plex-style folders',
+    jellyfin:
+      'The next major version adds support for common Plex-style movie and show layouts, so many switchers can test against the same media paths first.',
+    plex: 'Your library already works there, but staying means accepting the pricing, account, and privacy tradeoffs.',
+    winner: 'Less migration friction'
+  },
+  {
     feature: 'Watch history privacy',
     jellyfin: 'Viewing history stays on your server instead of becoming a social feed.',
     plex: 'Discover Together drew backlash after activity emails surfaced watch activity to Plex friends and family.',
@@ -80,22 +87,22 @@ export default function ProductComparison() {
       <div className='container'>
         <div className={clsx('row row--center text--center', styles.comparisonHeader)}>
           <div className='col col--8'>
-            <p className={styles.eyebrow}>Jellyfin vs Plex</p>
-            <h2>Own the server. Own the watch history.</h2>
+            <p className={styles.eyebrow}>Still on Plex?</p>
+            <h2>Know what you are trading away.</h2>
             <p>
-              Plex is polished, but its best personal-media features increasingly sit behind accounts, paid plans, and
-              social discovery layers. Jellyfin keeps the media server model simple: your media, your users, your watch
-              history, and your choices stay under your control.
+              You do not have to rage-quit your current setup to ask better questions. If your media server now feels
+              like a subscription funnel, compare it with Jellyfin before your next renewal or Lifetime Plex Pass
+              deadline, without reworking every folder before you know whether switching is worth it.
             </p>
           </div>
         </div>
 
         <div className={styles.privacyCallout}>
-          <strong>Privacy is the product boundary.</strong>
+          <strong>Your watch history should not be a growth feature.</strong>
           <p>
             Plex&apos;s 2023 Discover Together rollout triggered a backlash after weekly activity emails surprised users
             by surfacing viewing activity to Plex friends and family. A self-hosted media server should not become a
-            social network unless you ask for one.
+            social network unless you ask for one, and your own library should not feel like leverage.
           </p>
           <a
             href='https://www.techhive.com/article/2157803/plex-discover-together-privacy-concerns.html'

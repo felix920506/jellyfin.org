@@ -13,26 +13,30 @@ import ProductComparison from '../components/home/ProductComparison';
 export default function Home() {
   return (
     <Layout
-      title='Switch from Plex to Jellyfin'
-      description='Plex Pass prices are climbing. Take your media library back with Jellyfin, the free software media server that keeps your files, watch history, and server under your control.'
+      title='Considering Jellyfin after Plex?'
+      description='Annoyed by Plex pricing, accounts, or privacy surprises? Try Jellyfin alongside your current setup and see what a free software media server feels like.'
     >
-      <Hero title='Leaving Plex? Take Your Library Back.' large>
-        <p className='hero__eyebrow'>Plex refugees welcome. Your media should never become leverage.</p>
+      <Hero title='Annoyed with Plex? Try Jellyfin Before You Pay Up.' large>
+        <p className='hero__eyebrow'>
+          Not ready to switch yet? The next major Jellyfin release lowers one of the biggest migration hurdles.
+        </p>
         <p className='hero__text margin-vert--lg'>
-          With Lifetime Plex Pass set to jump to $749.99 on July 1, it is fair to ask why access to your own media keeps
-          coming with more toll booths. Jellyfin is the free, self-hosted way to keep your library, watch history,
-          hardware transcoding, live TV, and remote access setup under your control.
+          If Plex&apos;s pricing, account requirements, or watch-history surprises have you second-guessing the platform,
+          Jellyfin gives you a low-risk way to compare. Run it beside Plex, point it at your media, and see what it feels
+          like when hardware transcoding, live TV, remote access, and your watch history stay under your control. The
+          next major version adds support for common Plex-style media-library folder layouts, so switching does not have
+          to start with a mass rename project.
         </p>
         <div className='hero__buttons'>
           <Link to='/downloads/server' className='button button--lg button--primary'>
-            Switch to Jellyfin
+            Try Jellyfin Alongside Plex
           </Link>
           <a href='#jellyfin-vs-plex' className='button button--lg button--secondary button--outline'>
-            Compare with Plex
+            See What You Get Back
           </a>
         </div>
         <p className='hero__note'>
-          No subscription tiers. No central media account requirement. No hostage vibes.{' '}
+          No subscription tiers. No central media account requirement. No mass rename project just to kick the tires.{' '}
           <a href='/docs/general/community-standards/servers'>We do not run servers for users.</a>
         </p>
       </Hero>
